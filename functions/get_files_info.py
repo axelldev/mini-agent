@@ -2,6 +2,16 @@ import os
 
 
 def get_files_info(working_directory, directory="."):
+    """
+    Get the information about the files in a directory.
+
+    Args:
+        working_directory: The working directory to get the files from.
+        directory: The directory to get the files from.
+
+    Returns:
+        A string with the information about the files in the directory.
+    """
     try:
         working_directory_abs = os.path.abspath(working_directory)
         target_dir = os.path.normpath(os.path.join(working_directory_abs, directory))
